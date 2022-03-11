@@ -1,5 +1,7 @@
 package modulasi
 
+//coba
+
 import "fmt"
 
 func Kasir(uang, bayar int) int {
