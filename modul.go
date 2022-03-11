@@ -1,6 +1,6 @@
 package modulasi
 
-//coba
+//cobalagi
 
 import "fmt"
 
