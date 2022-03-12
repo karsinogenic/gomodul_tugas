@@ -42,6 +42,9 @@ ulang:
 func Coba1(coba int) {
 	fmt.Println("coba ", coba)
 }
+func Coba2() {
+	fmt.Println("coba2")
+}
 
 // var minyak = item{"minyak", 10, 30000, 0, 0}
 
