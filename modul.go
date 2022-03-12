@@ -1,6 +1,6 @@
 package modul
 
-//cobalagi
+//coba
 
 import "fmt"
 
