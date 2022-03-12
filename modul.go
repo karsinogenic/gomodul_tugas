@@ -4,7 +4,7 @@ package modul
 
 import "fmt"
 
-type item struct {
+type Item struct {
 	nama     string
 	stock    int
 	harga    int
@@ -48,7 +48,7 @@ func Coba2() {
 
 // var minyak = item{"minyak", 10, 30000, 0, 0}
 
-func (minyak item) Belanja1() (int, int) {
+func (minyak Item) Belanja1() (int, int) {
 	var banyak int
 	var ntotal int
 ulang1:
