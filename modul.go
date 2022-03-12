@@ -38,6 +38,7 @@ ulang:
 	}
 	return bayar, choice
 }
+
 func Coba() {
 	fmt.Println("coba")
 }
