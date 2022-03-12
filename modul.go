@@ -39,6 +39,8 @@ ulang:
 	return bayar, choice
 }
 
+var minyak = item{"minyak", 10, 30000, 0, 0}
+
 func (minyak item) Belanja1() (int, int) {
 	var banyak int
 	var ntotal int
