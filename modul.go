@@ -4,13 +4,13 @@ package modul
 
 import "fmt"
 
-type item struct {
-	nama     string
-	stock    int
-	harga    int
-	nBelanja int
-	nTotal   int
-}
+// type item struct {
+// 	nama     string
+// 	stock    int
+// 	harga    int
+// 	nBelanja int
+// 	nTotal   int
+// }
 
 func Kasir(uang, bayar int) int {
 	var kembali int
@@ -39,7 +39,7 @@ ulang:
 	return bayar, choice
 }
 
-func Coba(coba int) {
+func Coba1(coba int) {
 	fmt.Println("coba ", coba)
 }
 
