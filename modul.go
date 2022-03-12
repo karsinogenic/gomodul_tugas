@@ -39,13 +39,6 @@ ulang:
 	return bayar, choice
 }
 
-func Coba1(coba int) {
-	fmt.Println("coba ", coba)
-}
-func Coba2() {
-	fmt.Println("coba23")
-}
-
 // var minyak = item{"minyak", 10, 30000, 0, 0}
 
 func (minyak Item) Belanja1() (int, int) {
