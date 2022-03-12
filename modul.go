@@ -38,6 +38,9 @@ ulang:
 	}
 	return bayar, choice
 }
+func Coba() {
+	fmt.Println("coba")
+}
 
 var minyak = item{"minyak", 10, 30000, 0, 0}
 
