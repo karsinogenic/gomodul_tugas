@@ -5,11 +5,11 @@ package modul
 import "fmt"
 
 type Item struct {
-	nama     string
-	stock    int
-	harga    int
-	nBelanja int
-	nTotal   int
+	Nama     string
+	Stock    int
+	Harga    int
+	Nbelanja int
+	Ntotal   int
 }
 
 func Kasir(uang, bayar int) int {
@@ -19,11 +19,11 @@ func Kasir(uang, bayar int) int {
 	return kembali
 }
 
-func Troli(harga, banyak int) (int, bool) {
+func Troli(Harga, banyak int) (int, bool) {
 	var bayar int
 	var choice bool
 	var choice1 string
-	bayar = (harga * banyak) + bayar
+	bayar = (Harga * banyak) + bayar
 	fmt.Println("total belanja anda adalah ", bayar)
 ulang:
 	fmt.Print("ingin terus belanja (y/n)?")
@@ -43,23 +43,23 @@ ulang:
 
 func (minyak Item) Belanja1() (int, int) {
 	var banyak int
-	var ntotal int
+	var Ntotal int
 ulang1:
 	fmt.Printf("Anda memilih minyak, berapa banyak yang ingin anda beli : ")
-	//fmt.Printf("1.%s stock:%d harga:%s || 2.%s stock:%d harga:%s\n//////////////////////////////////////////////////////\n", minyak.nama, minyak.stock, minyak.harga, terigu.nama, terigu.stock, terigu.harga)
+	//fmt.Printf("1.%s Stock:%d Harga:%s || 2.%s Stock:%d Harga:%s\n//////////////////////////////////////////////////////\n", minyak.Nama, minyak.Stock, minyak.Harga, terigu.Nama, terigu.Stock, terigu.Harga)
 	//fmt.Print("Pilihan anda (1-2) : ")
 	fmt.Scanln(&banyak)
-	if banyak > minyak.stock {
-		fmt.Println("Stock tidak mencukupi, jumlah stock : ", minyak.stock)
+	if banyak > minyak.Stock {
+		fmt.Println("Stock tidak mencukupi, jumlah Stock : ", minyak.Stock)
 		goto ulang1
 	} else {
-		minyak.nBelanja = minyak.nBelanja + banyak
-		fmt.Println("Total minyak yang anda beli : ", minyak.nBelanja)
-		minyak.nTotal = minyak.nTotal + (minyak.nBelanja * minyak.harga)
-		ntotal = minyak.nTotal
-		fmt.Println("Total harga minyak yang anda beli : ", minyak.nTotal)
-		minyak.stock = minyak.stock - minyak.nBelanja
-		fmt.Println("Sisa stock: ", minyak.stock)
+		minyak.Nbelanja = minyak.Nbelanja + banyak
+		fmt.Println("Total minyak yang anda beli : ", minyak.Nbelanja)
+		minyak.Ntotal = minyak.Ntotal + (minyak.Nbelanja * minyak.Harga)
+		Ntotal = minyak.Ntotal
+		fmt.Println("Total Harga minyak yang anda beli : ", minyak.Ntotal)
+		minyak.Stock = minyak.Stock - minyak.Nbelanja
+		fmt.Println("Sisa Stock: ", minyak.Stock)
 	}
-	return banyak, ntotal
+	return banyak, Ntotal
 }
