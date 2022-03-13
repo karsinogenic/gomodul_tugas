@@ -12,13 +12,6 @@ type Item struct {
 	Ntotal   int
 }
 
-func Kasir(uang, bayar int) int {
-	var kembali int
-	kembali = uang - bayar
-
-	return kembali
-}
-
 func Troli(troli_item []string, troli_bnyk []int, total int) bool {
 	var choice string
 	var ulang3 bool
@@ -63,4 +56,34 @@ ulang1:
 		//fmt.Println("Sisa Stock: ", item.Stock)
 	}
 	return item.Stock, item.Nbelanja, item.Ntotal
+}
+
+func AnonymousData() (int, string, bool) { //anonymous struct
+	DataMember := struct {
+		Saldo    int
+		Nama     string
+		IsMember bool
+	}{
+		Saldo:    1000000,
+		Nama:     "Gimin",
+		IsMember: true,
+	}
+	return DataMember.Saldo, DataMember.Nama, DataMember.IsMember
+}
+func Kasir(diskon float64, saldo int, total int) (int, int) { //multi return
+	var sisa int
+	if diskon == 0.1 {
+		fmt.Println("Anda mendapatkan diskon member 10 persen")
+		total = total - int(float64(total)*diskon)
+
+	} else {
+		//total=total
+	}
+
+	if saldo < total == true {
+		fmt.Println("Uang Anda Kurang")
+	} else {
+		sisa = saldo - total
+	}
+	return total, sisa
 }
